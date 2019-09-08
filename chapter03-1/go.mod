@@ -1,4 +1,4 @@
-module github.com/itachizhu/gin-vue-samples/chapter02-1
+module github.com/itachizhu/gin-vue-samples/chapter03-1
 
 go 1.12
 
