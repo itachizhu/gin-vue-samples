@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/itachizhu/gin-vue-samples/chapter02-2/router"
+	"github.com/itachizhu/gin-vue-samples/chapter03-2/router"
 )
 
 func main() {

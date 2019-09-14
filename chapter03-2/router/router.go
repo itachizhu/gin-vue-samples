@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/itachizhu/gin-vue-samples/chapter02-2/controller"
+	"github.com/itachizhu/gin-vue-samples/chapter03-2/controller"
 )
 
 func Route(engine *gin.Engine) {

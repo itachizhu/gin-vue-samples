@@ -37,7 +37,7 @@ func main() {
 		context.String(http.StatusOK, "hello gin options method")
 	})
 	// 添加处理任意方法的请求路由
-	engine.Any("/hello", func(context *gin.Context) {
+	engine.Any("/hi", func(context *gin.Context) {
 		context.String(http.StatusOK, "hello gin any method")
 	})
 	// 使用Handle方法添加 Get 请求路由
