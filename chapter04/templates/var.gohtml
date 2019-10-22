@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .title }}</title>
+</head>
+<body>
+{{/* 这是注释 */}}
+{{ .content }}
+
+<br />
+{{ $var := "定义变量" }}
+{{/* 使用变量 */}}
+{{ $var }}
+</body>
+</html>
