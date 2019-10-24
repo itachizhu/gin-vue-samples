@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遍历</title>
+</head>
+<body>
+{{ range $key, $value := .}}
+    {{ $key }} =&gt; {{ $value }} <br />
+{{ end }}
+</body>
+</html>

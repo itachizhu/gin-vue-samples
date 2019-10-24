@@ -13,4 +13,7 @@ func Route(engine *gin.Engine) {
 
 	engine.GET("/map", controller.MapGetAction)
 	engine.GET("/var", controller.VarGetAction)
+	engine.GET("/condition", controller.ConditionGetAction)
+	engine.GET("/range", controller.RangeGetAction)
+	engine.GET("/main", controller.TemplateGetAction)
 }

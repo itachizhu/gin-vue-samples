@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件判断</title>
+</head>
+<body>
+{{ if gt .sum 10 }}
+    数字大于10
+{{ else if gt .sum 5 }}
+    数字大于5且不大于10
+{{ else }}
+    数字不大于5
+{{ end }}
+
+</body>
+</html>
