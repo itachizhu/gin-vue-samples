@@ -1,0 +1,14 @@
+package router
+
+import (
+	"github.com/gin-gonic/gin"
+	"github.com/itachizhu/gin-vue-samples/chapter05/controller"
+)
+
+func Route(engine *gin.Engine) {
+	engine.GET("/json", controller.IndexJsonAction)
+	engine.GET("/xml", controller.IndexXmlAction)
+	engine.GET("/yaml", controller.IndexYamlAction)
+	engine.GET("/image", controller.IndexImageAction)
+	engine.GET("/file", controller.IndexFileAction)
+}
