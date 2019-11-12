@@ -11,4 +11,8 @@ func Route(engine *gin.Engine) {
 	engine.GET("/yaml", controller.IndexYamlAction)
 	engine.GET("/image", controller.IndexImageAction)
 	engine.GET("/file", controller.IndexFileAction)
+
+	engine.GET("/login", controller.LoginGetAction)
+	engine.POST("/login", controller.LoginPostAction)
+	engine.PUT("/login", controller.LoginPutAction)
 }
