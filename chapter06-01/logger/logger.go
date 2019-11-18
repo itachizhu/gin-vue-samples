@@ -86,7 +86,7 @@ func NewZap(logName string) Logger {
 	})
 	encoder := zap.NewProductionEncoderConfig()
 	encoder.EncodeTime = zapcore.ISO8601TimeEncoder
-	core := zapcore.NewCore(zapcore.NewJSONEncoder(encoder), zapcore.NewMultiWriteSyncer(zapcore.AddSync(os.Stdout), syncWriter), zap.NewAtomicLevelAt(zapcore.DebugLevel))
+	core := zapcore.NewCore(zapcore.NewConsoleEncoder(encoder), zapcore.NewMultiWriteSyncer(zapcore.AddSync(os.Stdout), syncWriter), zap.NewAtomicLevelAt(zapcore.DebugLevel))
 	logger := zap.New(core, zap.AddCaller(), zap.AddCallerSkip(1))
 	return &zapLogger{zLogger: logger.Sugar()}
 }
