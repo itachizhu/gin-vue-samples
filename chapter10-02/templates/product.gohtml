@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加编辑商品</title>
+</head>
+<body>
+<form action="/products" method="post">
+    <input type="hidden" value="{{.ID}}" name="id" id="id" />
+    商品编码：<input type="text" name="productCode" id="productCode" value="{{.Code}}" /> <br />
+    商品名称：<input type="text" name="productName" id="productName" value="{{.Name}}" /> <br />
+    商品库存：<input type="text" name="productStock" id="productStock" value="{{.Stock}}" /> <br />
+    <input type="submit" value="提交" />
+</form>
+</body>
+</html>

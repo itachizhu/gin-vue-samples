@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+</head>
+<body>
+<input type="button" value="添加商品" onclick="addProduct(0);" />
+<table border="1" style="text-align: center;">
+    <thead>
+        <tr>
+            <td>商品编号</td>
+            <td>商品名称</td>
+            <td>商品库存</td>
+            <td>操作</td>
+        </tr>
+    </thead>
+    <tbody>
+    {{range $index,$value := . }}
+        <tr>
+            <td>{{$value.Code}}</td>
+            <td>{{$value.Name}}</td>
+            <td>{{$value.Stock}}</td>
+            <td><a href="javascript:addProduct({{$value.ID}});">修改</a> | <a href="/delete-product?id={{$value.ID}}" target="_self">删除</a></td>
+        </tr>
+    {{end}}
+    </tbody>
+</table>
+</body>
+</html>
+<script type="text/javascript">
+    function addProduct(id) {
+        window.open("/product?id=" + id, "_self");
+    }
+</script>
